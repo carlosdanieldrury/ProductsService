@@ -27,7 +27,7 @@ namespace EstoqueEntityModel.Migrations
             //    );
             //
 
-            context.ProdutoEstoque.AddOrUpdate(
+            context.ProdutoEstoques.AddOrUpdate(
                 pe => pe.Id,
                     new ProdutoEstoque() { NumeroProduto = "1000", NomeProduto = "Produto 1", DescricaoProduto = "Este é o produto 1", EstoqueProduto = 100 },
                     new ProdutoEstoque() { NumeroProduto = "2000", NomeProduto = "Produto 2", DescricaoProduto = "Este é o produto 2", EstoqueProduto = 10 },
