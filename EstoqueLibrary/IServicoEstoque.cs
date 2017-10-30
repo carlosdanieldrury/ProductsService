@@ -25,7 +25,7 @@ namespace Servico
         int ConsultarEstoque(string NumeroProduto);
 
         [OperationContract]
-        bool AdicionarProduto(string NumeroProduto, int quantidade);
+        bool AdicionarEstoque(string NumeroProduto, int quantidade);
 
         [OperationContract]
         bool RemoverEstoque(string NumeroProduto, int quantidade);
@@ -40,7 +40,7 @@ namespace Servico
     public interface IServicoEstoqueV2
     {
         [OperationContract]
-        bool AdicionarProduto(string NumeroProduto, int quantidade);
+        bool AdicionarEstoque(string NumeroProduto, int quantidade);
 
         [OperationContract]
         bool RemoverEstoque(string NumeroProduto, int quantidade);
@@ -55,32 +55,13 @@ namespace Servico
     {
 
         [DataMember]
-        public string NumeroProduto
-        {
-            get { return NumeroProduto; }
-            set { NumeroProduto = value; }
-        }
-
+        public string NumeroProduto;
         [DataMember]
-        public string NomeProduto
-        {
-            get { return NomeProduto; }
-            set { NomeProduto = value; }
-        }
-
+        public string NomeProduto;
         [DataMember]
-        public string DescricaoProduto
-        {
-            get { return DescricaoProduto; }
-            set { DescricaoProduto = value; }
-        }
-
+        public string DescricaoProduto;
         [DataMember]
-        public int EstoqueProduto
-        {
-            get { return EstoqueProduto; }
-            set { EstoqueProduto = value; }
-        }
+        public int EstoqueProduto;
 
 
     }

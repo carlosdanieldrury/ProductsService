@@ -5,7 +5,7 @@
       <xsd:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd0" namespace="http://projetoavaliativo.dm113/01" />
       <xsd:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-      <xsd:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Servico" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IServicoEstoque_ListarProdutos_InputMessage">
@@ -32,11 +32,11 @@
   <wsdl:message name="IServicoEstoque_ConsultarEstoque_OutputMessage">
     <wsdl:part name="parameters" element="tns:ConsultarEstoqueResponse" />
   </wsdl:message>
-  <wsdl:message name="IServicoEstoque_AdicionarProduto_InputMessage">
-    <wsdl:part name="parameters" element="tns:AdicionarProduto" />
+  <wsdl:message name="IServicoEstoque_AdicionarEstoque_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdicionarEstoque" />
   </wsdl:message>
-  <wsdl:message name="IServicoEstoque_AdicionarProduto_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AdicionarProdutoResponse" />
+  <wsdl:message name="IServicoEstoque_AdicionarEstoque_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdicionarEstoqueResponse" />
   </wsdl:message>
   <wsdl:message name="IServicoEstoque_RemoverEstoque_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoverEstoque" />
@@ -67,9 +67,9 @@
       <wsdl:input wsaw:Action="http://projetoavaliativo.dm113/01/IServicoEstoque/ConsultarEstoque" message="tns:IServicoEstoque_ConsultarEstoque_InputMessage" />
       <wsdl:output wsaw:Action="http://projetoavaliativo.dm113/01/IServicoEstoque/ConsultarEstoqueResponse" message="tns:IServicoEstoque_ConsultarEstoque_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AdicionarProduto">
-      <wsdl:input wsaw:Action="http://projetoavaliativo.dm113/01/IServicoEstoque/AdicionarProduto" message="tns:IServicoEstoque_AdicionarProduto_InputMessage" />
-      <wsdl:output wsaw:Action="http://projetoavaliativo.dm113/01/IServicoEstoque/AdicionarProdutoResponse" message="tns:IServicoEstoque_AdicionarProduto_OutputMessage" />
+    <wsdl:operation name="AdicionarEstoque">
+      <wsdl:input wsaw:Action="http://projetoavaliativo.dm113/01/IServicoEstoque/AdicionarEstoque" message="tns:IServicoEstoque_AdicionarEstoque_InputMessage" />
+      <wsdl:output wsaw:Action="http://projetoavaliativo.dm113/01/IServicoEstoque/AdicionarEstoqueResponse" message="tns:IServicoEstoque_AdicionarEstoque_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RemoverEstoque">
       <wsdl:input wsaw:Action="http://projetoavaliativo.dm113/01/IServicoEstoque/RemoverEstoque" message="tns:IServicoEstoque_RemoverEstoque_InputMessage" />

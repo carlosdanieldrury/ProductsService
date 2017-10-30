@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://projetoavaliativo.dm113/01" elementFormDefault="qualified" targetNamespace="http://projetoavaliativo.dm113/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/" />
+  <xs:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Servico" />
   <xs:element name="ListarProdutos">
     <xs:complexType>
       <xs:sequence />
@@ -17,7 +17,7 @@
   <xs:element name="IncluirProduto">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="produto" nillable="true" type="q2:ProdutoEstoqueData" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Servico" minOccurs="0" name="produto" nillable="true" type="q2:ProdutoEstoqueData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -56,7 +56,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AdicionarProduto">
+  <xs:element name="AdicionarEstoque">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="NumeroProduto" nillable="true" type="xs:string" />
@@ -64,10 +64,10 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AdicionarProdutoResponse">
+  <xs:element name="AdicionarEstoqueResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="AdicionarProdutoResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="AdicionarEstoqueResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -96,7 +96,7 @@
   <xs:element name="VerProdutoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="VerProdutoResult" nillable="true" type="q3:ProdutoEstoqueData" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Servico" minOccurs="0" name="VerProdutoResult" nillable="true" type="q3:ProdutoEstoqueData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

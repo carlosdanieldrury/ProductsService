@@ -6,14 +6,14 @@
       <xsd:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd0" namespace="http://projetoavaliativo.dm113/01" />
       <xsd:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-      <xsd:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/" />
+      <xsd:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Servico" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IServicoEstoqueV2_AdicionarProduto_InputMessage">
-    <wsdl:part name="parameters" element="tns:AdicionarProduto" />
+  <wsdl:message name="IServicoEstoqueV2_AdicionarEstoque_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdicionarEstoque" />
   </wsdl:message>
-  <wsdl:message name="IServicoEstoqueV2_AdicionarProduto_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AdicionarProdutoResponse" />
+  <wsdl:message name="IServicoEstoqueV2_AdicionarEstoque_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdicionarEstoqueResponse" />
   </wsdl:message>
   <wsdl:message name="IServicoEstoqueV2_RemoverEstoque_InputMessage">
     <wsdl:part name="parameters" element="tns:RemoverEstoque" />
@@ -28,9 +28,9 @@
     <wsdl:part name="parameters" element="tns:VerProdutoResponse" />
   </wsdl:message>
   <wsdl:portType name="IServicoEstoqueV2">
-    <wsdl:operation name="AdicionarProduto">
-      <wsdl:input wsaw:Action="http://projetoavaliativo.dm113/02/IServicoEstoqueV2/AdicionarProduto" message="tns:IServicoEstoqueV2_AdicionarProduto_InputMessage" />
-      <wsdl:output wsaw:Action="http://projetoavaliativo.dm113/02/IServicoEstoqueV2/AdicionarProdutoResponse" message="tns:IServicoEstoqueV2_AdicionarProduto_OutputMessage" />
+    <wsdl:operation name="AdicionarEstoque">
+      <wsdl:input wsaw:Action="http://projetoavaliativo.dm113/02/IServicoEstoqueV2/AdicionarEstoque" message="tns:IServicoEstoqueV2_AdicionarEstoque_InputMessage" />
+      <wsdl:output wsaw:Action="http://projetoavaliativo.dm113/02/IServicoEstoqueV2/AdicionarEstoqueResponse" message="tns:IServicoEstoqueV2_AdicionarEstoque_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="RemoverEstoque">
       <wsdl:input wsaw:Action="http://projetoavaliativo.dm113/02/IServicoEstoqueV2/RemoverEstoque" message="tns:IServicoEstoqueV2_RemoverEstoque_InputMessage" />

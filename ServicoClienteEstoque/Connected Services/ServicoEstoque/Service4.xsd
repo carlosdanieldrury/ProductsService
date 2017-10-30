@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://projetoavaliativo.dm113/02" elementFormDefault="qualified" targetNamespace="http://projetoavaliativo.dm113/02" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/" />
-  <xs:element name="AdicionarProduto">
+  <xs:import schemaLocation="http://localhost:51291/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Servico" />
+  <xs:element name="AdicionarEstoque">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="NumeroProduto" nillable="true" type="xs:string" />
@@ -9,10 +9,10 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="AdicionarProdutoResponse">
+  <xs:element name="AdicionarEstoqueResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="AdicionarProdutoResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="AdicionarEstoqueResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -41,7 +41,7 @@
   <xs:element name="VerProdutoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="VerProdutoResult" nillable="true" type="q1:ProdutoEstoqueData" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Servico" minOccurs="0" name="VerProdutoResult" nillable="true" type="q1:ProdutoEstoqueData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

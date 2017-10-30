@@ -104,7 +104,7 @@ namespace Servico
             return quantidade;
         }
 
-        public bool AdicionarProduto(string NumeroProduto, int quantidade)
+        public bool AdicionarEstoque(string NumeroProduto, int quantidade)
         {
             try
             {
