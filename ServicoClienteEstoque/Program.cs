@@ -76,7 +76,7 @@ namespace ServicoClienteEstoque
             if (proxy.AdicionarEstoque("2000", 10))
             {
                 quantidade = proxy.ConsultarEstoque("2000");
-                Console.WriteLine("Quantidade Produto 2: ", quantidade);
+                Console.WriteLine("10 items adicionados");
             }
             else
             {
@@ -100,7 +100,7 @@ namespace ServicoClienteEstoque
             Console.WriteLine("Teste 8: Remover 20 items do Produto 1");
             if (proxy.RemoverEstoque("1000", 20))
             {
-                Console.WriteLine("Itens removidos");
+                Console.WriteLine("20 Itens removidos");
             }
             else
             {
@@ -111,17 +111,21 @@ namespace ServicoClienteEstoque
             // Verificar Estoque Produto 1
             Console.WriteLine("Teste 9: quantidade do produto 1");
             quantidade = proxy.ConsultarEstoque("1000");
-            Console.WriteLine("Current stock: {0}", quantidade);
+            Console.WriteLine("Quantidade Produto 1: {0}", quantidade);
             Console.WriteLine();
 
             // Get details of this product
             Console.WriteLine("Teste 10: Verificar as informacoes do Produto 1");
             produto = proxy.VerProduto("1000");
-            Console.WriteLine("Numero Produto: {0}", produto.NumeroProduto);
-            Console.WriteLine("Nome Produto: {0}", produto.NomeProduto);
-            Console.WriteLine("Descricao Produto: {0}", produto.DescricaoProduto);
-            Console.WriteLine("Estoque Produto: {0}", produto.EstoqueProduto);
-            Console.WriteLine();
+            if (produto != null)
+            {
+                Console.WriteLine("Numero Produto: {0}", produto.NumeroProduto);
+                Console.WriteLine("Nome Produto: {0}", produto.NomeProduto);
+                Console.WriteLine("Descricao Produto: {0}", produto.DescricaoProduto);
+                Console.WriteLine("Estoque Produto: {0}", produto.EstoqueProduto);
+                Console.WriteLine();
+            }
+            
 
 
             Console.WriteLine("Press ENTER to finish");

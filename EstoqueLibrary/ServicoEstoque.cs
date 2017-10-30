@@ -136,9 +136,14 @@ namespace Servico
                     // Find the first product that matches the specified product code
                  
                    ProdutoEstoque produtoEstoque = database.ProdutoEstoques.First(pi => pi.NumeroProduto == NumeroProduto);
-                    database.ProdutoEstoques.Remove(produtoEstoque);
+                    if (produtoEstoque.EstoqueProduto - quantidade > 0)
+                    {
+                        produtoEstoque.EstoqueProduto -= quantidade;
+                        database.SaveChanges();
+                    }
+                    
                     // Save the change back to the database
-                    database.SaveChanges();
+                    
 
                 }
             }
