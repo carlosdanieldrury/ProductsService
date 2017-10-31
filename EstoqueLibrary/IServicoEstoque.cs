@@ -46,7 +46,7 @@ namespace Servico
         bool RemoverEstoque(string NumeroProduto, int quantidade);
 
         [OperationContract]
-        ProdutoEstoqueData VerProduto(string NumeroProduto);
+        int ConsultarEstoque(string NumeroProduto);
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

@@ -14,7 +14,7 @@ namespace ServicoClienteEstoque
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+            Console.WriteLine("Servico Cliente Estoque - Enter para iniciar");
             Console.ReadLine();
             ServicoEstoqueClient proxy = new ServicoEstoqueClient("BasicHttpBinding_IServicoEstoque");
 
@@ -128,7 +128,7 @@ namespace ServicoClienteEstoque
             
 
 
-            Console.WriteLine("Press ENTER to finish");
+            Console.WriteLine("Enter para finalizar");
             Console.ReadLine();
         }
     }
